@@ -1,106 +1,366 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orichalcum Mining Company</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sample">
+  <meta name="author" content="Shin">
+  <meta name="generator" content="Hugo 0.84.0">
+  <title>Orichalcum Mining Company</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
 
-     <!-- Bootstrap core CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
+  <link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+  <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
+  <meta name="theme-color" content="#7952b3">
 
-    <style>
-        .footerdiv {
-          margin-top:100px;
-          height:300px;
-          width:100%;
-          background-color:#0b7fab;
-          color:#e9723d;
-          padding:20px;
+  <style>
+    .footerdiv {
+      margin-top:100px;
+      margin-bottom: 0%;
+      height:100%;
+      width:100%;
+      background-color:#0b7fab;
+      color:#e9723d;
+      padding:20px;
+    }
+    
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    /* GLOBAL STYLES
+        -------------------------------------------------- */
+    /* Padding below the footer and lighter body text */
+
+    body {
+      padding-top: 3rem;
+      /* padding-bottom: 3rem; */
+      color: #5a5a5a;
+    }
+
+    img {
+      object-fit: cover;
+    }
+
+    kbd {
+        color:#0b7fab; 
+        background-color:#f4d75e ;
         }
 
-        body {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-        color: #5a5a5a;
-        }
+    /* CUSTOMIZE THE CAROUSEL
+        -------------------------------------------------- */
 
-        img {
-        object-fit: cover;
-        }
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 4rem;
+    }
 
-    </style>
-  
+    /* Since positioning the image, we need to help out the caption */
+    .carousel-caption {
+      bottom: 3rem;
+      z-index: 10;
+    }
+
+    /* Declare heights because of positioning of img element */
+    .carousel-item {
+      height: 32rem;
+    }
+
+    .carousel-item>img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 32rem;
+    }
+
+
+    /* MARKETING CONTENT
+        -------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .col-lg-4 {
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .marketing h2 {
+      font-weight: 400;
+    }
+
+    /* rtl:begin:ignore */
+    .marketing .col-lg-4 p {
+      margin-right: .75rem;
+      margin-left: .75rem;
+    }
+
+    /* rtl:end:ignore */
+
+
+    /* Featurettes
+        ------------------------- */
+
+    .featurette-divider {
+      margin: 5rem 0;
+      /* Space out the Bootstrap <hr> more */
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-weight: 300;
+      line-height: 1;
+      /* rtl:remove */
+      letter-spacing: -.05rem;
+    }
+
+
+    /* RESPONSIVE CSS
+        -------------------------------------------------- */
+
+    @media (min-width: 40em) {
+
+      /* Bump up size of carousel content */
+      .carousel-caption p {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
+      }
+
+      .featurette-heading {
+        font-size: 50px;
+      }
+    }
+
+    @media (min-width: 62em) {
+      .featurette-heading {
+        margin-top: 7rem;
+      }
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+
+
+  <!-- <link href="carousel.css" rel="stylesheet"> -->
 </head>
+
 
 <body>
 
     
     <!-- header .... -->
     <header>
-        <nav class="navbar navbar-expand-md fixed-top" style="background-color:#0b7fab;color:#e9723d">
-          <div class="container-fluid" >
-            <img src="./img/logo_icon.png" style="width: 60px; height:auto"></img>
-            <a class="navbar-brand" href="#" style="font-weight: bold;margin-left: 10px;color:#e9723d">오리할쿰 Orichalcum</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-              <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="./consignment.html" style="color :#f4d75e;font-weight:600">위탁</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./sales.html" style="color:#f4d75e;font-weight:600">판매</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./rental.html" style="color:#f4d75e;font-weight:600">렌탈</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./support.html" style="color:#f4d75e;font-weight:600">고객지원</a>
-                </li>
-              </ul>              
-            </div>
-          </div>
-        </nav>
-      </header>
-
-      <main>
-
-        <div style="height: 60px;"></div>
-        <div class="text-dark bg-light"> 위탁페이지</div>
-  
-       
-          <!-- FOOTER -->
+      <nav class="navbar navbar-expand-md fixed-top" style="background-color:#0b7fab">
+        <div class="container-fluid">
           
-          <div class="footerdiv"  style="height: 400px;">
-            <footer class="container-fluid">
-              <div class="row">
-                <div class="col-6">
-                  <p>&copy; 2021 Orichalcum Mining Company, Inc.</p>
-                  <p>본사사무실 : 경기도 남양주시 별내면 송산로 546 2층, 우편번호 12090<br/> english adress : 2nd floor, 564, Songsan-ro, Namyangju-si, Gyeonggi-do (12090) <br/>Tel : 031-000-0000 <br/>Fax : 031-000-0000<br/>정보통신업 00-000-0000</p>
-                  <p></p>
-                </div>
-                <div class="col-6">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61558.46995187169!2d127.0883435807532!3d37.67740377945562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cc8041849e539%3A0xb3da25142afa3c85!2zR3llb25nZ2ktZG8sIE5hbXlhbmdqdS1zaSwgQnllb2xsYWUtbXllb24sIOyGoeyCsOuhnCA1NjQ!5e0!3m2!1sen!2skr!4v1628429384613!5m2!1sen!2skr"  style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" width="500" height="350" frameborder="0">
-                  </iframe>    
+          <a class="navbar-brand" href="./index.html" style="font-weight: bold;margin-left: 10px;color:#e9723d">
+            <img src="./img/logo_icon.png" alt="" style="width: 60px; height:auto; margin-right: 10px"></img>
+            오리할콘 Orichalcum
+          </a>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="color: black;""></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./consignment.html" style="color :#f4d75e;font-weight:600">위탁</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./sales.html" style="color:#f4d75e;font-weight:600">판매</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./cloud.html" style="color:#f4d75e;font-weight:600">클라우드마이닝</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./rental.html" style="color:#f4d75e;font-weight:600">렌탈</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./support.html" style="color:#f4d75e;font-weight:600">고객지원</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+  
+
+  <main>
+        
+        <div style="height: 60px;"></div>
+        
+      <div class="container-fluid">
+        
+        <div><H2>채굴기 위탁서비스 안내</H2><BR></div>
+        <div class="card text-white mb-3" style="background-color: #0b7fab;">
+          <div class="card-header" style="color: #f4d75e;">채굴기 위탁서비스</div>
+          <div class="card-body">
+            <h5 class="card-title">오리할콘에 채굴기를 맡겨서 개인 채굴을 할 수 있습니다</h5>
+            <p class="card-text">고객이 구입한 채굴기를 채굴시설이 완벽하게 갖추어진 오리할콘에 위탁비용을 지불하고 채굴기를 맡겨서 채굴할 수 있는 서비스입니다. 
+              오리할콘은 채굴기를 정상적으로 가동시키기 위한 열관리, 안정적인 전기공급과 인터넷, 실시간 모니터링 및 경고 체계 등을 서비스하고, 
+              채굴기를 구입한 고객은 별다른 전문지식이 없이도 이에 마음놓고 가상화폐를 채굴할 수 있습니다.</p>
+          </div>
+        </div>
+        
+        <div class="card text-white mb-3" style="background-color: #0b7fab;">
+          <div class="card-header" style="color: #f4d75e;">위탁의 조건</div>
+          <div class="card-body">
+            <h5 class="card-title">오리할콘에서 조립, 구매한 채굴기만 위탁이 가능합니다</h5>
+            <p class="card-text">그 이유는 오리할콘이 제작하지 않은 채굴기를 위탁관리하다가 문제가 생겼을 경우 
+              귀책사유의 주체가 누구인지에 대한 분쟁이 발생할 우려가 크기 때문에, 오리할콘이 직접 조립, 제작한 채굴기만을 위탁 받고 무한 책임을 지는 자세로 관리할 
+              것입니다.</p>
+          </div>
+        </div>
+        
+        <div class="card text-white mb-3" style="background-color: #0b7fab;">
+          <div class="card-header" style="color: #f4d75e;">위탁기간</div>
+          <div class="card-body">
+            <h5 class="card-title">위탁계약의 기간은 1년이며, 연장이 가능합니다.</h5>
+            <p class="card-text">위탁계약 종료일이 도래하기 전에 위탁종료를 원하면 종료원하는 날 30일 전에 오리할콘에 통보해야 합니다.</p>
+          </div>
+        </div>
+
+        <div class="card text-white mb-3" style="background-color: #0b7fab;">
+          <div class="card-header" style="color: #f4d75e;">기타사항</div>
+          <div class="card-body">
+            <!-- <h5 class="card-title">위탁계약의 기간은 1년이며, 연장이 가능합니다.</h5> -->
+            <p class="card-text">- 채굴장 내에서의 채굴기 위치선정은 계약시 상담 후 결정할 수 있으나, 원칙적으로는 전적으로 오리할콘에서 결정합니다.<br>
+              - 위탁시 채굴관리운용 소프트웨어의 선택은 오리할콘에서 임의로 정할 수 있습니다. 고객이 몇가지 점에서 양해를 할 시에는 고객이 원하는 소프트웨어로도 운용이 가능합니다.<br>
+              - 마이닝 풀의 선택은 오리할콘에서 임의로 정할 수 있습니다. 역시 고객이 몇가지 점에서 양해할 시 고객이 원하는 풀에서도 운용이 가능합니다.
+            </p>
+          </div>
+        </div>
+
+        <div><br><H2>채굴기 위탁비용</H2><br></div>
+        <div class="card text-white mb-3" style="background-color: #0b7fab;">
+          <div class="card-header" style="color: #f4d75e;">위탁비용</div>
+          
+          <div class="container-fluid">
+            
+            <div class="row" style="padding:1.0rem;">
+              
+              <div class="col align-self-start">
+                <div class="card" style="width: 18rem;background-color: #f4d75e;">
+                  <div class="card-body">
+                    <h5 class="card-title">2060 Super / 6 웨이</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Ethash : about 255 MH/s</h6>
+                    <p class="card-text">RTX 2060 Super 의 경우 대략 42.5 MH/s 정도의 해시값을 지속적으로 내어줄 수 있습니다. 42.5 x 6 = 255 의 해시값을 기대할 수 있습니다. 
+                      위탁비용은 전기요금을 포함해서 <strong>15만원</strong>(부가세별도)입니다.</p>
+                      <button type="button" class="btn btn-primary" style="background-color: #0b7fab;">150,000 원/월</button>
+                  </div>
                 </div>
               </div>
-              
-              <!-- <p class="float-end"><a href="#">맨 위로...</a></p> -->
-            </footer>
+
+              <div class="col align-self-center">
+                <div class="card" style="width: 18rem;background-color: #f4d75e;">
+                  <div class="card-body">
+                    <h5 class="card-title">RTX 3080 / 4 웨이</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Ethash : about 388 MH/s</h6>
+                    <p class="card-text">RTX 3080 의 경우 대략 97.0 MH/s 정도의 해시값을 지속적으로 내어줄 수 있습니다. 97.0 x 4 = 388 의 해시값을 기대할 수 있습니다. 
+                      위탁비용은 전기요금을 포함해서 <strong>19만원</strong>(부가세별도)입니다.</p><br>
+                      <button type="button" class="btn btn-primary" style="background-color: #0b7fab;">190,000 원/월</button>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col align-self-end">
+                <div class="card" style="width: 18rem;background-color: #f4d75e;">
+                  <div class="card-body">
+                    <h5 class="card-title">기타 채굴기</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Ethash : 다양 MH/s</h6>
+                    <p class="card-text">RTX 30xx, AMD 등 다른 종류의 그래픽카드로 구성된 채굴기의 경우 전력소모량을 실측해서 전기요금을 산정한 후에 순수한 관리비용 7만원을 더하는
+                      방법으로 위탁비용을 계산합니다.</p><br>
+                      
+                    <button type="button" class="btn btn-primary" style="background-color: #0b7fab;">전기요금 + 79,000 원/월</button>
+                  </div>
+                </div>
+              </div>
+
+            </div> <!--row-->
+          </div>  
+        </div>
+
+        <!-- 위탁상담 -->
+        
+          <div><br>
+          <h2>위탁상담</h2>
+          <br>
+          <div class="card text-white mb-3" style="background-color: #0b7fab;">
+            <div class="card-header" style="color: #f4d75e;">상담가능시간 : 휴대전화 오전10시 - 오후6시 이며, 카카오톡은 24시(근무시간 외 답변은 12시간 이내에 가능합니다) 입니다</div>
+            <div class="card-body">
+              <h5 class="card-title"></h5>
+              <p class="card-text"><kbd>카카오톡 ID</kbd> : Orichalcum
+                <br><kbd>휴대전화</kbd> : 010-2949-1789</p>
+            </div>
           </div>
+          
+          <p style="background-color: #0b7fab;">
+          </p>
+        </div>
+      </div>
+          <!-- FOOTER -->
+        
+        <div class="footerdiv">
+          <footer class="container-fluid">
+            <div class="row">
+              <div class="col-6">
+                <p></p>
+                <address><kbd>오리할콘 주소 Address </kbd> <br> 경기도 남양주시 별내면 송산로 546 2층, 우편번호 12090<br>                
+                  <strong>Orichalcum</strong> Mining Company, Inc.
+                  <br>2nd floor, 564, Songsan-ro, Namyangju-si, Gyeonggi-do (12090)</address> 
+                <address>
+                <kbd>Tel</kbd> : 031-000-0000 <br>
+                <kbd>Fax</kbd> : 031-000-0000<br>
+                <kbd>E-mail</kbd> : OrichalcumMiner@gmail.com<br> 
+                <kbd>Kakao ID</kbd> : <strong>Orichalcum</strong><br>
+                <kbd>사업자등록</kbd> : 정보통신업 00-000-0000</adress>
+
+                <p> </p>   
+                <p class="">Copyright &copy; 2021 Orichalcum Mining Company, Inc.</p>
+              </div>
+              <div class="col-6">
+                <iframe class="rounded" width="100%" height="100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61558.46995187169!2d127.0883435807532!3d37.67740377945562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cc8041849e539%3A0xb3da25142afa3c85!2zR3llb25nZ2ktZG8sIE5hbXlhbmdqdS1zaSwgQnllb2xsYWUtbXllb24sIOyGoeyCsOuhnCA1NjQ!5e0!3m2!1sen!2skr!4v1628429384613!5m2!1sen!2skr"  style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" width="500" height="350" frameborder="0">
+                </iframe>    
+              </div>
+            </div>
+            <!-- <p class="float-end"><a href="#">맨 위로...</a></p> -->
+          </footer>
+        </div> <!--footerdiv--> 
   
-        </main>
+  </main>
   
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
         </script>
-  
   
 </body>
 
